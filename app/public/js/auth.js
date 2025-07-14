@@ -18,13 +18,14 @@ export const auth = {
 
   // Implementa la función de registro
   register: async (name, email, pass) => {
+    debugger
     // If it doesn't exist, register the user and save it to localStorage
     // Throw an error if the email is already registered
     const existingUser = await api.get(`/users?email=${email}`);
     if (existingUser.length > 0) {
       throw new Error("El email ya está registrado");
     }
-    const newUser = { name, email, password: pass, rolId: 2 };
+    const newUser = { name, email, password: pass, rolId: "cliente" };
     await api.post("/users", newUser); // Registra el nuevo usuario
   },
   // Implementa la función de logout
