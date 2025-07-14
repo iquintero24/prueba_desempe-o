@@ -3,7 +3,7 @@ export const api = {
    * 🔗 URL base de la API. Cambiar si la API corre en otro puerto o dominio.
    * @type {string}
    */
-  baseUrl: "http://localhost:3000/",
+  baseUrl: "http://localhost:3000",
 
   /**
    * 📥 GET: Retrieves data from a specific REST API path.
