@@ -1,6 +1,5 @@
-
 import { api } from "./api.js";
-import {auth} from "./auth.js";
+import { auth } from "./auth.js";
 import { router } from "./route.js";
 
 // 🔴 VISTA 404 (cuando la ruta no existe)
@@ -12,7 +11,6 @@ export function renderNotFound() {
    
   `;
 }
-
 
 // 🔐 VISTA LOGIN
 export async function showLogin() {
@@ -66,6 +64,28 @@ export async function showRegister() {
   };
 }
 
-
-
-  
+// Implementa la vista principal del dashboard
+export async function showDashboard() {
+  const u = auth.getUser();
+  document.getElementById("app").innerHTML = `
+   <nav class="dashboard_nav">
+      <a href="#/dashboard/courses" data-link>Ver eventos</a>
+      <a href="#/dashboard/register/events" data-link>Historial de eventos</a>
+      ${
+        u.role === "admin"
+          ? `<a href="#/dashboard/courses/create" data-link>Crear Eventos</a>`
+          : ""
+      }
+    </nav>
+    <div class="container_dashboard">
+     <h2>Bienvenido, ${u.name} (${u.role})</h2>
+    <button class="salir" id="out">Salir</button>
+    </div>`;
+  document.getElementById("out").onclick = auth.logout;
+  document.querySelectorAll("[data-link]").forEach((a) => {
+    a.onclick = (e) => {
+      e.preventDefault();
+      location.hash = a.getAttribute("href");
+    };
+  });
+}
