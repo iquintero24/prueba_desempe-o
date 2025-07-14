@@ -180,3 +180,13 @@ nav {
     }
 
 }
+
+.card__events{
+    width: 90%;
+    background-color: #84714F;
+    padding: 1rem;
+    height: 10rem;
+    text-decoration: none;
+    list-style: none;
+    border-radius:10px;
+}
