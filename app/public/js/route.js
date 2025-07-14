@@ -6,33 +6,40 @@ You can add, modify, or remove routes as needed for your application.*/
 import { auth } from "./auth.js"; //Session management (login, logout, current user)
 import {
   renderNotFound, // Vista 404 si no encuentra la ruta
+  showLogin, // Vista login
+  showRegister, // Vista registro
+  showDashboard, // Vista principal del sistema (autenticado)
 } from "./view.js";
 
 // 📌 Define the valid routes for your SPA application here
 // Each key is a hash (#/route) and its value is a function that renders that view.
 
 const routes = {
+  "#/login": showLogin,
+  "#/register": showRegister,
+  "#/dashboard": showDashboard,
   // You can add more routes if you need other views (for example: profile, settings, etc.)
 };
 
 
-export function router () {
-  const path = location.hash || "#login"; // Take the current hash (#/path) or redirect to default login
-  const user = auth.getUser(); // Get the current user from localStorage or null
+// 📦 Función principal del enrutador SPA
+export function router() {
+  const path = location.hash || "#/login"; // Toma el hash actual (#/ruta) o redirige a login por defecto
+  const user = auth.getUser(); // Obtiene el usuario actual desde localStorage o null
 
-  // 🔐 Route protection: blocks access to the dashboard if you are not logged in
+  // 🔐 Protección de rutas: bloquea acceso a dashboard si no está logueado
   if (path.startsWith("#/dashboard") && !auth.isAuthenticated()) {
     location.hash = "#/login"; // redirige al login
     return;
   }
 
-  // 🚫 Prevents logged-in users from logging in or registering
+  // 🚫 Evita que usuarios logueados entren a login o register
   if ((path === "#/login" || path === "#/register") && auth.isAuthenticated()) {
-    location.hash = "#/dashboard"; // if already authenticated, sends them to the dashboard
+    location.hash = "#/dashboard"; // si ya está autenticado, lo manda al dashboard
     return;
   }
 
-  // 🧭 Navigation: finds the view in the routes and executes it
+  // 🧭 Navegación: encuentra la vista en las rutas y la ejecuta
   const view = routes[path];
   if (view) {
     view(); // carga la vista correspondiente
