@@ -21,11 +21,39 @@ nav {
     width: 100%;
     background-color: #5a3a31;
     padding: 1rem;
-    border: var(--border);
     text-align: center;
     color: #e2f1af;
+    border: none;
+    display: flex;
+    justify-content: center;
+
+    & a {
+        text-decoration: none;
+        color: white;
+        cursor: pointer;
+    }
 
 }
+
+.dashboard_nav {
+    width: 100%;
+    background-color: #5a3a31;
+    padding: 1rem;
+    text-align: center;
+    color: #e2f1af;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+
+    & a {
+        text-decoration: none;
+        color: white;
+        cursor: pointer;
+    }
+}
+
 
 #app {
     height: 100vh;
@@ -127,4 +155,28 @@ nav {
         background-color: #5a3a31;
         color: white;
     }
+}
+
+
+.container_dashboard {
+    width: 100%;
+    background-color: #e2f1af;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    align-items: center;
+    padding: 2rem;
+
+
+
+    .salir {
+        width: 10rem;
+        border: none;
+        width: 15rem;
+        padding: 1rem;
+        background-color: #e3d888;
+
+    }
+
 }
