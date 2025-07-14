@@ -3,11 +3,11 @@
 
 
 :root {
-    --border:1px solid rgba(128, 128, 128, 0.322);
+    --border: 1px solid rgba(128, 128, 128, 0.322);
 }
 
 
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -17,11 +17,114 @@
     font-style: normal;
 }
 
-nav{
+nav {
     width: 100%;
-    background-color: #fff;
+    background-color: #5a3a31;
     padding: 1rem;
     border: var(--border);
     text-align: center;
-    
+    color: #e2f1af;
+
+}
+
+#app {
+    height: 100vh;
+}
+
+.notFoundContainer {
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #e2f1af;
+}
+
+.container_login {
+    width: 100%;
+    background-color: #e2f1af;
+    height: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+
+
+    & a,
+    h2 {
+        text-decoration: none;
+        color: #5a3a31;
+    }
+}
+
+.container_register {
+    width: 100%;
+    background-color: #e2f1af;
+    height: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+
+
+    & a,
+    h2 {
+        text-decoration: none;
+        color: #5a3a31;
+    }
+}
+
+.form_login {
+    width: 90%;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    height: 30rem;
+    justify-content: space-around;
+    align-items: center;
+
+
+    & input,
+    button {
+        width: 100%;
+        padding: 1rem;
+        border: 1px solid black;
+    }
+
+    & button {
+        background-color: #5a3a31;
+        color: white;
+    }
+
+
+}
+
+.form_register {
+    width: 90%;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    height: 30rem;
+    justify-content: space-around;
+    align-items: center;
+
+
+    & input,
+    button {
+        width: 100%;
+        padding: 1rem;
+        border: 1px solid black;
+    }
+
+    & button {
+        background-color: #5a3a31;
+        color: white;
+    }
 }
