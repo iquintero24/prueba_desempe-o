@@ -1,0 +1,33 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "email": "admin@eventos.com",
+      "password": "admin123",
+      "role": "admin"
+    },
+    {
+        "id": 2,
+        "email": "carolina@gmail.com",
+        "password": "caro123",
+        "role": "cliente"
+    }
+  ],
+  "events": [
+    {
+        "id": 1,
+        "title": "concierto de maluma",
+        "color": "#ff0000",
+        "ability": 10
+    }
+  ],
+  
+  "registrations": [
+        {
+            "id":1,
+            "fecha": "10-10-2024",
+            "idPersona": 2,
+            "idEvento": 1
+        }
+  ]
+}
