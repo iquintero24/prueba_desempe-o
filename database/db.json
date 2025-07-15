@@ -17,20 +17,27 @@
   ],
   "events": [
     {
-      "id": "1",
-      "title": "concierto de maluma",
-      "color": "#ff0000",
-      "ability": 9,
+      "id": "2",
+      "title": "concierto de travis",
+      "color": "#d1345b",
+      "ability": 7,
       "enrolled": [
         "carolina@gmail.com"
       ]
     },
     {
-      "id": "2",
-      "title": "concierto de travis",
-      "color": "#d1345b",
-      "ability": 1,
-      "enrolled": 0
+      "id": "a6a6",
+      "title": "fiesta de cumpleaños",
+      "color": "#ffcc00",
+      "ability": 8,
+      "enrolled": []
+    },
+    {
+      "id": "1e87",
+      "title": "maluma en barranquilla",
+      "color": "#1100ff",
+      "ability": 9,
+      "enrolled": []
     }
   ],
   "registrations": [
@@ -39,6 +46,12 @@
       "fecha": "10-10-2024",
       "idPersona": 2,
       "idEvento": 1
+    },
+    {
+      "id": "cd49",
+      "fecha": "2025-07-15T00:50:42.406Z",
+      "idPersona": "2",
+      "idEvento": "2"
     }
   ]
 }

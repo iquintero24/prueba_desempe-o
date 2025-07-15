@@ -9,6 +9,10 @@ import {
   showLogin, // Vista login
   showRegister, // Vista registro
   showDashboard, // Vista principal del sistema (autenticado)
+  showCourses,
+  showCreateCourse,
+  showEditCourse,
+  // Implementa en views.js
 } from "./view.js";
 
 // 📌 Define the valid routes for your SPA application here
@@ -18,6 +22,9 @@ const routes = {
   "#/login": showLogin,
   "#/register": showRegister,
   "#/dashboard": showDashboard,
+  "#/dashboard/events": showCourses, // Listado de cursos
+  "#/dashboard/events/create": showCreateCourse,
+   // Formulario para crear curso
   // You can add more routes if you need other views (for example: profile, settings, etc.)
 };
 
@@ -36,6 +43,12 @@ export function router() {
   // 🚫 Evita que usuarios logueados entren a login o register
   if ((path === "#/login" || path === "#/register") && auth.isAuthenticated()) {
     location.hash = "#/dashboard"; // si ya está autenticado, lo manda al dashboard
+    return;
+  }
+
+  // Ejemplo: ruta dinámica para editar curso
+  if (path.startsWith("#/dashboard/courses/edit/")) {
+    showEditCourse(); // Implementa esta función en views.js
     return;
   }
 
