@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Sora:wght@100..800&display=swap');
+
+
+
+:root {
+    --border: 1px solid rgba(128, 128, 128, 0.322);
+}
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Sora", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: normal;
+    font-style: normal;
+}
+
+nav {
+    width: 100%;
+    background-color: #5a3a31;
+    padding: 1rem;
+    text-align: center;
+    color: #e2f1af;
+    border: none;
+    display: flex;
+    justify-content: center;
+
+    & a {
+        text-decoration: none;
+        color: white;
+        cursor: pointer;
+    }
+
+}
+
+.dashboard_nav {
+    width: 100%;
+    background-color: #5a3a31;
+    padding: 1rem;
+    text-align: center;
+    color: #e2f1af;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+
+    & a {
+        text-decoration: none;
+        color: white;
+        cursor: pointer;
+    }
+}
+
+
+#app {
+    height: 100vh;
+}
+
+.notFoundContainer {
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #e2f1af;
+}
+
+.container_login {
+    width: 100%;
+    background-color: #e2f1af;
+    height: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+
+
+    & a,
+    h2 {
+        text-decoration: none;
+        color: #5a3a31;
+    }
+}
+
+.container_register {
+    width: 100%;
+    background-color: #e2f1af;
+    height: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+
+
+    & a,
+    h2 {
+        text-decoration: none;
+        color: #5a3a31;
+    }
+}
+
+.form_login {
+    width: 90%;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    height: 30rem;
+    justify-content: space-around;
+    align-items: center;
+
+
+    & input,
+    button {
+        width: 100%;
+        padding: 1rem;
+        border: 1px solid black;
+    }
+
+    & button {
+        background-color: #5a3a31;
+        color: white;
+    }
+
+
+}
+
+.form_register {
+    width: 90%;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    height: 30rem;
+    justify-content: space-around;
+    align-items: center;
+
+
+    & input,
+    button {
+        width: 100%;
+        padding: 1rem;
+        border: 1px solid black;
+    }
+
+    & button {
+        background-color: #5a3a31;
+        color: white;
+    }
+}
+
+.form_create {
+    width: 90%;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    height: 30rem;
+    justify-content: space-around;
+    align-items: center;
+
+
+    & input,
+    button {
+        width: 100%;
+        padding: 1rem;
+        border: 1px solid black;
+    }
+
+    & button {
+        background-color: #5a3a31;
+        color: white;
+    }
+}
+
+.form_edit {
+    width: 90%;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    height: 30rem;
+    justify-content: space-around;
+    align-items: center;
+
+
+    & input,
+    button {
+        width: 100%;
+        padding: 1rem;
+        border: 1px solid black;
+    }
+
+    & button {
+        background-color: #5a3a31;
+        color: white;
+    }
+}
+
+
+.container_dashboard {
+    width: 100%;
+    background-color: #e2f1af;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    align-items: center;
+    padding: 2rem;
+
+
+
+    .salir {
+        width: 10rem;
+        border: none;
+        width: 15rem;
+        padding: 1rem;
+        background-color: #e3d888;
+
+    }
+
+}
+
+.card__events {
+    width: 90%;
+    background-color: #84714F;
+    padding: 1rem;
+    height: 10rem;
+    text-decoration: none;
+    list-style: none;
+    border-radius: 10px;
+}
+
+#out{
+    width: 10rem;
+    border: none;
+    background-color: #5a3a31;
+    color: white;
+}

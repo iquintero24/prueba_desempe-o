@@ -1,0 +1,57 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "name": "admin",
+      "email": "admin@eventos.com",
+      "password": "admin123",
+      "role": "admin"
+    },
+    {
+      "id": "2",
+      "name": "carolina",
+      "email": "carolina@gmail.com",
+      "password": "caro123",
+      "role": "cliente"
+    }
+  ],
+  "events": [
+    {
+      "id": "2",
+      "title": "concierto de travis",
+      "color": "#d1345b",
+      "ability": 7,
+      "enrolled": [
+        "carolina@gmail.com"
+      ]
+    },
+    {
+      "id": "a6a6",
+      "title": "fiesta de cumpleaños",
+      "color": "#ffcc00",
+      "ability": 8,
+      "enrolled": []
+    },
+    {
+      "id": "1e87",
+      "title": "maluma en barranquilla",
+      "color": "#1100ff",
+      "ability": 9,
+      "enrolled": []
+    }
+  ],
+  "registrations": [
+    {
+      "id": "1",
+      "fecha": "10-10-2024",
+      "idPersona": 2,
+      "idEvento": 1
+    },
+    {
+      "id": "cd49",
+      "fecha": "2025-07-15T00:50:42.406Z",
+      "idPersona": "2",
+      "idEvento": "2"
+    }
+  ]
+}
